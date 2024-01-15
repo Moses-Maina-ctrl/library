@@ -1,13 +1,14 @@
 const bookName = document.querySelector('#bookName');
 const authorName = document.querySelector('#authorName');
 const statuse = document.querySelector('#status');
+const myLibrary = [];
   
-const myLibrary = [{title:"The Lord of the Rings",author:"J.R.R. Tolkein",read:'Not yet'}];
 function book(title, author, read) {
   this.title = title;
   this.author = author;
   this.read = read;
 }
+
  function addBookToLibrary() {
   let bookNameValue =  bookName.value;
   let authorNameValue =authorName.value;
@@ -15,6 +16,13 @@ function book(title, author, read) {
 
   let newBook = new book( bookNameValue, authorNameValue, statusValue)
   myLibrary.push(newBook);
-  console.log(myLibrary);
-	
+  if (myLibrary.length == 0){
+  
+  }else{
+    for (let i=0; i<myLibrary.length; i++){
+
+    }
+  }
  }
+
+
