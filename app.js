@@ -2,6 +2,8 @@ const bookName = document.querySelector('#bookName');
 const authorName = document.querySelector('#authorName');
 const statuse = document.querySelector('#status');
 const bookDisplay = document.querySelector("#bookDisplay")
+const showAuthor = document.querySelector("#Author")
+const showStatus = document.querySelector("#Status")
 const myLibrary = [];
   
 function book(title, author, read) {
@@ -19,17 +21,22 @@ function book(title, author, read) {
   let newBook = new book( bookNameValue, authorNameValue, statusValue)
   myLibrary.push(newBook);
   console.log(myLibrary);
-  if (myLibrary.length == 0){
+ showBooks()
+  }
+
+function showBooks(){
+ if (myLibrary.length == 0){
     bookDisplay.innerText = "Please add books"
   }else{
-   
-    bookDisplay.innerText = "There is  books"
+    myLibrary.forEach(book =>{
 
-    // for (let i=0; i<myLibrary.length; i++){
-//TODO function to show books
 
-    //}
-  }
+    bookDisplay.innerText = book.title
+    showAuthor.innerText = book.author
+      //TODO fix undefined output
+    showStatus.innerText = book.status
+  }) 
  }
+}
 
-
+showBooks();
