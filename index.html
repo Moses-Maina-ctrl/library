@@ -16,8 +16,9 @@
 		<input type="text" name="Author" id="authorName" required>
 		<label for="status">Status</label>
 		<select name='status' id='status'>
-			<option value="read">Read</option>
-			<option value="notRead">Not Read</option>
+			<option value="Finished">Finished</option>
+			<option value="Still Reading">Still Reading</option>
+			<option value="Not Read">Not Read</option>
 		</select>
 		<button type="button" onclick="addBookToLibrary()">Add</button>
 	</form>
@@ -30,6 +31,17 @@
 		<div id="Status"></div>
 
 	</div>
+	<table id="books">
+		<tr>
+			<th>Book</th>
+			<th>Author</th>
+			<th>Status</th>
+
+		</tr>
+		<tbody>
+			
+		</tbody>
+	</table>
 
 </body>
 </html>
