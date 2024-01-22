@@ -9,19 +9,25 @@
 </head>
 <body>
 	<h1>My Library</h1>
-	<form>
-		<label for="bookName">Book</label>
-		<input type="text" name="book" id="bookName" required>
-		<label for="authorName">Author</label>
-		<input type="text" name="Author" id="authorName" required>
-		<label for="status">Status</label>
-		<select name='status' id='status'>
-			<option value="Finished">Finished</option>
-			<option value="Still Reading">Still Reading</option>
-			<option value="Not Read">Not Read</option>
-		</select>
-		<button type="button" onclick="addBookToLibrary()">Add</button>
-	</form>
+	<button class="open-button" onclick="openForm()">+</button>
+	<div class="formContainer" id="form">
+		<h2>Add Book</h2>
+		<div class="cancel" onclick="closeForm()">+</div>
+		<form>
+			<label for="bookName">Book</label>
+			<input type="text" name="book" id="bookName" required>
+			<label for="authorName">Author</label>
+			<input type="text" name="Author" id="authorName" required>
+			<label for="status">Status</label>
+			<select name='status' id='status'>
+				<option value="Finished">Finished</option>
+				<option value="Still Reading">Still Reading</option>
+				<option value="Not Read">Not Read</option>
+			</select>
+			<button type="button" class="btn" onclick="addBookToLibrary()">Add</button>
+			
+		</form>
+	</div>
 	<div class="Books">
 
 		<div id="bookDisplay"></div>

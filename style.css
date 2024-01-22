@@ -1,0 +1,74 @@
+body{
+	font-size: 1.5rem;
+	font-family: monospace;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+	padding: 1rem;
+}
+
+
+td,
+th{
+	padding: 1rem;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+th{
+	text-align: left;
+}
+
+
+.open-button{
+	font-size: 2rem;
+	border:none;
+	outline: none;
+	border-radius:50%;
+	width: 50px;
+	height: 50px;
+	font
+}
+
+.formContainer{
+	display:none;
+	padding: 1rem;
+	margin-top:1.8rem;
+	border-radius:10px;
+	width: 500px;
+	transition: 0.5s;
+	box-shadow: 5px 5px 35px 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.formContainer .cancel{
+	font-size:3rem;
+	right: 2px;
+	top:0;
+	position: absolute;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+form{
+	display:block;
+}
+
+.formContainer input, .formContainer select{
+	width: 90%;
+	background-color: #f7f7f7;
+	border: 0;
+	padding: 1rem;
+	margin: 5px 0 22px 0;
+	border-radius: 10px;
+}
+
+select{
+	font-size: 1rem;
+	font-family: monospace;
+}
+
+

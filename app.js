@@ -25,7 +25,9 @@ function book(title, author, read) {
   console.log(myLibrary);
   //This looks kinda sloppy but it works i'll fix it later
   table.innerHTML= ''
+  bookDisplay.innerText =''
  showBooks()
+  document.getElementById("form").style.display = "none"
   }
 
 function showBooks(){
@@ -48,4 +50,13 @@ function showBooks(){
  }
 }
 
+function openForm(){
+  document.getElementById("form").style.display = "block"
+}
+
+function closeForm(){
+  
+  document.getElementById("form").style.display = "none"
+
+}
 showBooks();
