@@ -37,12 +37,14 @@ function showBooks(){
  if (myLibrary.length == 0){
     showAddbook.innerHTML = `<p>Please add books<p>`
   }else{
-    table.innerHTML = "<thead><th>Title</th><th>Author</th><th>Status</th></thead>";
+    showAddbook.innerHTML =''
+    table.innerHTML = "<thead><th>Title</th><th>Author</th><th>Status</th><th></th></thead>";
     myLibrary.forEach(book => {
         table.innerHTML +=  `<tr>
           <td>${book.title}</td>
           <td>${book.author}</td>
           <td>${book.read}</td>
+          <td><button class="delete">delete</button></td>
 
         </tr>`
       
@@ -62,3 +64,7 @@ function closeForm(){
 
 }
 showBooks();
+
+function delBooks(){
+  let val = this.closest(
+}
