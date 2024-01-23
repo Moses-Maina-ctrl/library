@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>My Library</h1>
-	<button class="open-button" onclick="openForm()">+</button>
+	<section id="popup">
 	<div class="formContainer" id="form">
 		<h2>Add Book</h2>
 		<div class="cancel" onclick="closeForm()">+</div>
@@ -28,15 +28,12 @@
 			
 		</form>
 	</div>
-	<div class="Books">
+	</section>
 
 		<div id="bookDisplay"></div>
 
-		<div id="Author"></div>
 
-		<div id="Status"></div>
 
-	</div>
 	<table id="books">
 		<tr>
 			<th>Book</th>
@@ -48,6 +45,10 @@
 			
 		</tbody>
 	</table>
+
+		<div id="Addbook"></div>
+	
+	<button class="open-button" onclick="openForm()">+</button>
 
 </body>
 </html>
