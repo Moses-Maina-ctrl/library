@@ -8,11 +8,7 @@ body{
 *::after {
   box-sizing: inherit;
 }
-@media only screen and (max-width: 420px)
-.formContainer{
-	    width: 200px;
-	    font-size: 1rem;
-}
+
 table{
 	margin-left: auto;
 	margin-right: auto;
@@ -34,13 +30,13 @@ th{
 }
 
 .open-button{
-	font-size: 2rem;
+	font-size: 1rem;
 	border:none;
 	background-color: rgb(228, 26, 103);
 	outline: none;
 	border-radius:50%;
-	width: 75px;
-	height: 75px;
+	width: 50px;
+	height: 50px;
 	bottom: 5%;
 	right: 5%;
 	position: fixed;
@@ -70,6 +66,10 @@ th{
 	transform: rotate(45deg);
 	cursor: pointer;
 }
+#books{
+	width:70%;
+	}
+
 
 form{
 	display:block;
@@ -97,8 +97,6 @@ select{
 	    padding: 0 30px;
 	    color: black;
 	    text-align: center;
-	    letter-spacing: .1rem;
-	    text-transform: uppercase;
 	    white-space: nowrap;
 	    border-radius: 4px;
 	    border: 1px solid #bbb;
@@ -118,7 +116,24 @@ select{
 	 text-align: center;
  }
  h1{
+	 margin: auto;
 	 text-align:center;
  }
 
+@media only screen and (max-width: 420px){
+.formContainer{
+	    width: 320px;
+	    font-size: 1rem;
+}
+}
+@media only screen and (max-width:360px){
+#popup .container{
+	width:260px;
+}
+}
+@media only screen and (max-width: 420px) {
+	body {
+	  font-size:1rem;
+  }
+}
 
