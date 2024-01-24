@@ -41,10 +41,10 @@ function showBooks(){
     table.innerHTML = "<thead><th>Title</th><th>Author</th><th>Status</th><th></th></thead>";
     myLibrary.forEach(book => {
         table.innerHTML +=  `<tr>
-          <td>${book.title}</td>
+          <td class="title">${book.title}</td>
           <td>${book.author}</td>
-          <td>${book.read}</td>
-          <td><button class="delete">delete</button></td>
+          <td><button class="status" onclick="changeStatus(this)">${book.read}</button></td>
+          <td><button class="delete" onclick="delBooks(this)">delete</button></td>
 
         </tr>`
       
@@ -65,6 +65,40 @@ function closeForm(){
 }
 showBooks();
 
-function delBooks(){
-  let val = this.closest(
+function delBooks(button){
+  let row = button.closest('tr');
+  let val = row.querySelector(".title").textContent;
+  let index = myLibrary.findIndex(function(book){
+        return book.title === val;
+  });
+
+  if (index != -1){
+    myLibrary.splice(index,1);
+    row.remove();
+  }
+ if (myLibrary.length == 0){
+    showAddbook.innerHTML = `<p>Please add books<p>`
+  }
 }
+
+function changeStatus(button){
+  let row = button.closest('tr');
+  let val = row.querySelector(".title").textContent;
+  let index = myLibrary.findIndex(function(book){
+        return book.title === val;
+  });
+
+  if (index != -1){
+    if(myLibrary[index].read === "Read"){
+      myLibrary[index].read = "Not Read"
+      button.textContent = "Not Read"
+
+  }else if (myLibrary[index].read ==="Not Read"){
+      myLibrary[index].read = "Read"
+      button.textContent = "Read"
+
+
+    } 
+
+  }
+} 
